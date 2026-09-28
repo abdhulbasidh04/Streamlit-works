@@ -1,0 +1,36 @@
+import streamlit as s
+from datetime import date
+# streamlit.title("My First App")
+# s.title("")
+# name=s.text_input("Enter your Name")
+# age=s.text_input("Enter your Age")
+# place=s.text_input("Enter your Place")
+# gender=s.radio("select gender",['male','female'])
+# qualification=s.selectbox("select qualification",['BBA','BCA','BTECH'])
+# btn=s.button("submit")
+# if btn:
+#     s.title("User Info")
+#     # s.subheader(f"Name: {name}")
+#     s.write("Name: ",name)
+#     s.write("age: ",age)
+#     s.write("place: ",place)
+#     s.write("Gender: ",gender)
+#     s.write("Qualification: ",qualification)
+
+s.title("Student Registration Form")
+name=s.text_input("Enter your name")
+age=s.number_input("Enter your age",min_value=0)
+dob=s.date_input("Enter your dob",min_value=date(2000,1,1),max_value=date.today(),value=date.today())
+email=s.text_input("Enter your email")
+gender=s.radio("select gender",['male','female'])
+courses=s.selectbox("Select course",['python','java','dotnet','testing'])
+btn=s.button("Register")
+if btn:
+    s.title("Student Details")
+    s.write("Name: ",name)
+    s.write("age: ",age)
+    s.write("dob: ",dob)
+    s.write("email: ",email)
+    s.write("gender: ",gender)
+    s.write("courses: ",courses)
+
